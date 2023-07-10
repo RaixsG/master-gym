@@ -1,3 +1,14 @@
+<script>
+    import { onMount } from 'svelte';
+    import { navigate } from 'svelte-routing';
+    import { user } from './stores/user';
+    
+    onMount(() => {
+    if (!$user) {
+      navigate(ROUTES.LOGIN, {replace: true});
+    }
+  })
+</script>
 <section>
     <h2>Bienvenido a Master GYM - Admin</h2>
     <div class="description-container">
