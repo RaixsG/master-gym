@@ -1,8 +1,8 @@
 <script>
     import { onMount } from 'svelte';
     import { navigate } from 'svelte-routing';
-    import { user } from './stores/user';
-    
+    import { user } from '../../../stores/user'
+
     onMount(() => {
     if (!$user) {
       navigate(ROUTES.LOGIN, {replace: true});
